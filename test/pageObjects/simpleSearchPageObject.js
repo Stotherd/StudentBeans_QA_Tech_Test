@@ -18,7 +18,7 @@ class simpleSearchPageObject extends ParentPageObject {
   }
 
   setSearchText(string) {
-    const element = $('//*[@id="home_root"]/div[1]/nav/div[1]/div[1]/div[2]/div/div/div/div[1]/div[1]/input')
+    const element = $('//*/input')
     element.click()
     element.setValue(string)
     const errorMessage = 'actual does not equal expected'
@@ -26,7 +26,7 @@ class simpleSearchPageObject extends ParentPageObject {
   }
 
   checkResults(string) {
-    const element = $('/html/body/div[2]/div[1]/nav/div[1]/div[1]/div[2]/div/div/div/div[2]/div/div[1]/div/div[2]/div[1]/div/a[1]/div/span[1]')
+    const element = $('//*/a[1]/div/span[1]')
     this.isElementEqualToExpected(element, string)
   }
 }
